@@ -1,6 +1,6 @@
 # JavaScript Cheat Sheet
 
-> Last updated: 07/14/2015
+> Last updated: 07/15/2015
 
 ## Primitives
 Primitives are the basic building blocks of JavaScript.
@@ -184,12 +184,79 @@ Primitives are the basic building blocks of JavaScript.
 - Text received by the `prompt` function is received as a string.
 - `confirm` produces a message box as well, but when OK is clicked it returns `true` otherwise it returns `false`.
 
-## Useful Methods
-- `str.length`: the length of the string `str`.
-- `str.toUpperCase()`: returns the uppercase version of `str`.
-- `str.toLowerCase()`: returns the lowercase version of `str`.
-- `str.parseInt()`: convert a valid string into an integer.
-- `str.charAt(i)`: returns the character in a string at index `i`.
-- `obj.toString()`: returns the string representation of an object.
-- `data.length`: the number of elements in the array `data`.
-- [The JavaScript methods index](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Methods_Index)
+## Methods
+
+[The JavaScript methods index](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Methods_Index)
+
+### String Methods
+
+[Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Methods)
+
+#### `indexOf(i)`
+
+#### `split()`
+
+#### `case()`
+
+#### `trim()`
+
+#### `substring()`
+
+#### `length()`
+
+Returns the length of the string `str`.
+
+#### `toUpperCase()`
+
+Returns the uppercase version of `str`.
+
+#### `toLowerCase()`
+
+Returns the lowercase version of `str`.
+
+#### `parseInt()`
+
+Converts a valid string into an integer.
+
+#### `charAt(i)`
+
+Returns the character in a string at index `i`.
+
+### Array Methods
+
+[Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype#Methods)
+
+#### `length()`
+
+Returns the number of elements in the array `data`.
+
+#### `indexOf(i)`
+
+Given an item, `i`, this method returns either the position, if the item is found, or -1, if the item is not found.
+
+```javascript
+var testArray = ["Hello", "World"]
+console.log(testArray.indexOf("World"))  // returns 1
+console.log(testArray.indexOf("Earth"))  // returns -1
+```
+
+#### `slice()`
+
+#### `splice()`
+
+#### `join()`
+
+#### `concat()`
+
+#### `reverse()`
+
+#### `sort()`
+
+### Objects
+
+[Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods)
+
+
+#### `toString()`:
+
+Returns the string representation of an object.
