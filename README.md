@@ -1,6 +1,6 @@
 # JavaScript Cheat Sheet
 
-> Last updated: 07/15/2015
+> Last updated: 07/18/2015
 
 ## Primitives
 Primitives are the basic building blocks of JavaScript.
