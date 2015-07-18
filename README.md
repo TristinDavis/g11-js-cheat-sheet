@@ -190,17 +190,43 @@ Primitives are the basic building blocks of JavaScript.
 
 ### String Methods
 
-[Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Methods)
+[String Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Methods)
 
 #### `indexOf(i)`
 
+Takes an integer as argument and returns the character at that position.
+
 #### `split()`
 
-#### `case()`
+splits string objects into an array of strings
+```javascript
+var str = "this is a string"
+var newStr = str.split(“ “)
+newStr
+//—> returns
+[“this”,”is”,”a”,”string”]
+```
 
 #### `trim()`
 
-#### `substring()`
+Removes the whitespace around a string
+```javascript
+var str = "        Hola!    ";
+console.log(str.trim());
+var newStr = str.trim();
+console.log(newStr);
+
+returns ->
+"       Hola!"
+"Hola!"
+```
+
+#### `substring(a, b)`
+
+Returns a string that is a peice of the original. It takes 2 arguments, the second one being optional.
+
+`a` = index to begin substring
+`b` = is the position at which the substring stops, and doesn't include `b`
 
 #### `length()`
 
@@ -242,21 +268,120 @@ console.log(testArray.indexOf("Earth"))  // returns -1
 
 #### `slice()`
 
+does not change the original array
+
+slice returns selected elements in an array as a new array object.  
+
+Selects element at start arguement and ends at _but does not include_ the end argument.
+
+
+######syntax
+arrayObj.slice(start, [end])
+
+```javascript
+var animals = ["fish", "cow", "chicken", "pig", "moose", "elephant"];
+var farmAnimals = animals.slice(1, 4);
+console.log("preslice"+animals);
+console.log("postslice"+farmAnimals);
+
+returns ->
+
+preslice [ 'fish', 'cow', 'chicken', 'pig', 'moose', 'elephant' ]
+
+postslice [ 'cow', 'chicken', 'pig' ]
+```
 #### `splice()`
+
+Changes the original array
+splice cuts out, or adds, items to an array.
+
+###### syntax
+arrayObj.splice(index, howmany, item1, ....., itemX)
+```javascript
+var numbers = [1,2,3,4,5,6];
+console.log("presplice", numbers);
+console.log("spliced",numbers.splice(2,2, "banana", "strawberry"));
+console.log("postsplice", numbers);
+
+// return ->
+presplice [ 1, 2, 3, 4, 5, 6 ]
+// return ->
+spliced [ 3, 4 ]
+// return ->
+postsplice [ 1, 2, 'banana', 'strawberry', 5, 6 ]
+```
+
 
 #### `join()`
 
+str = arr.join([separator = ','])
+
+Returns a string of all array items concatenated with the argument given in between each.
+
 #### `concat()`
 
+concatenate array:
+var array1=[1,2,3]
+var array2=[4,5,6]
+var array3 = array1.concat(array2)
+array3 —> [1,2,3,4,5,6]
+
+
 #### `reverse()`
+* exactly as it sounds
+* inplace, means returns the same array in different order (destructive)
+* doesn't work on strings, only on arrays
 
 #### `sort()`
+* compares via unicode
+  * unicode
+    * assigns number value to each character,
+    * international standard (example UTF-8)
+* order is roughly: numbers, uppercase, lowercase
+
+###Compares Function
+* compares two values and orders them
+* repeat for entire array
+
+#### This code sorts numbers
+```javascript
+// ascending
+array.sort(function(a,b){return a-b});
+// descending
+array.sort(function(a,b){return b-a});
+
+```
+
+* inplace, means returns the same array in different order (destructive)
+* doesn't work on strings, only on arrays
 
 ### Objects
 
 [Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods)
 
+#### `indexOf(i)`
 
+indexOf(searchElement, fromIndex) Given an item, i, this method returns either the position, if the item is found, or -1, if the item is not found. Optional: can also note the start index in the second argument.
+
+Examples:
+```javascript
+var testArray = ["Hello", "Sun", "World", "Sun", "Mars"] console.log(testArray.indexOf("World")) // returns 1
+
+console.log(testArray.indexOf("Earth")) // returns -1 console.log(testArray.indexOf("Sun", 2)) // returns 3
+```
+###Case (string)
+
+####`.toUpperCase()`
+
+returns the calling string value converted to uppercase
+
+####`.toLowerCase()`
+returns the calling string value converted to lowercase
+
+Examples:
+```javascript
+console.log("hello".toUpperCase()); // returns "HELLO" console.log("BYE".toLowerCase()); // returns "bye"
+```
 #### `toString()`:
 
 Returns the string representation of an object.
